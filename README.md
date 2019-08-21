@@ -11,6 +11,12 @@ Supports:
 - Awesome dotenv and nice setup to handle it in "main" and "renderer"
 - CSS Modules & PostCSS
 
+TODO:
+
+- sqlite3 integration (electron-builder?)
+- Translations plugin
+- Aliases, especially for postcss
+
 # install dependencies
 
 yarn
