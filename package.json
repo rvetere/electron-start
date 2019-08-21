@@ -8,10 +8,24 @@
     "dist": "yarn compile && electron-builder",
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
   },
+  "electronWebpack": {
+    "whiteListedModules": [
+      "@apollo/react-hooks"
+    ]
+  },
   "dependencies": {
+    "@apollo/react-hooks": "^3.0.1",
+    "apollo-boost": "^0.4.4",
+    "graphql": "^14.4.2",
+    "graphql-import": "^0.7.1",
+    "graphql-tools": "^4.0.5",
+    "graphql-transport-electron": "^1.0.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "source-map-support": "^0.5.12"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.0.0",
     "electron": "5.0.6",
     "electron-builder": "^21.0.11",
     "electron-webpack": "^2.7.4",
