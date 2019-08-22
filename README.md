@@ -42,15 +42,23 @@ yarn dist:dir
 # i18n
 
 Have a new `<FormattedMessage>` or `defineMessage` and want to translate it?
--> Run `yarn i18n:pot` to extract the latest keys from source and update the `i18n/translations/messages.pot` file
--> Open up poedit and open the existing `de.pot` (the lang you want), and execute `Catalog -> Update from POT file`
--> Now the new key is there to translate :)
+
+```bash
+# to extract the latest keys from source and update the `i18n/translations/messages.pot` file
+yarn i18n:pot
+```
+
+Open up poedit and open the existing `de.pot` (the lang you want), and execute `Catalog -> Update from POT file`
 
 Want to add a new language?
--> Open poedit, open the existing `messages.pot` file and on the bottom select `Add new translation`, select the langauge
--> Save the new file under `i18n/translations/<lang-id>.po`
 
-Finally run `yarn i18n:json` to update the `src/common/messages.json` file which is used in the runtime
+1. Open poedit, open the existing `messages.pot` file and on the bottom select `Add new translation`, select the langauge
+2. Save the new file under `i18n/translations/<lang-id>.po`
+
+```bash
+# to update the `src/common/messages.json` file which is used in the runtime
+yarn i18n:json
+```
 
 ### BIG HELP
 
