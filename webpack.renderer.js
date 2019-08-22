@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const merge = require('webpack-merge')
 
-RegExp.prototype.toJSON = RegExp.prototype.toString
+//RegExp.prototype.toJSON = RegExp.prototype.toString
 
 module.exports = function(config) {
   const filtered = config.module.rules.filter(r => r.test && new RegExp(r.test).toString().indexOf('.css$') === -1)
@@ -38,7 +38,7 @@ module.exports = function(config) {
     }
   })
 
-  fs.writeFileSync(path.resolve(__dirname, 'tmp.json'), JSON.stringify(config, null, 2))
+  //fs.writeFileSync(path.resolve(__dirname, 'tmp.json'), JSON.stringify(config, null, 2))
 
   return config
 }
