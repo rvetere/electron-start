@@ -16,13 +16,12 @@ export const Home = () => {
 
   return (
     <div className={styles.home}>
-      {data.hello}
       <FormattedMessage
         id="app.greeting"
         description="Greeting to welcome the user to the app"
         defaultMessage="Hello, {name}!"
         values={{
-          name: 'Brudi'
+          name: data.hello
         }}
       />
     </div>
