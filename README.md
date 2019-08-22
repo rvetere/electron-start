@@ -48,7 +48,7 @@ Have a new `<FormattedMessage>` or `defineMessage` and want to translate it?
 yarn i18n:pot
 ```
 
-Open up poedit and open the existing `de.pot` (the lang you want), and execute `Catalog -> Update from POT file`
+Open up poedit and open the existing `de.po` (the lang you want), and execute `Catalog -> Update from POT file`
 
 Want to add a new language?
 
