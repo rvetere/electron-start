@@ -1,6 +1,6 @@
-# stackbee-app
+# electron-start
 
-An electron app based on the UBER AWESOME work of: https://webpack.electron.build/
+An electron boilerplate based on the UBER AWESOME work of: https://webpack.electron.build/
 
 Supports:
 
