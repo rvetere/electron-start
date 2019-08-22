@@ -1,0 +1,15 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2019-08-22T17:40:08.369Z\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"MIME-Version: 1.0\n"
+"X-Generator: react-intl-po\n"
+
+
+#: ./i18n/keys.json
+#. [app.greeting] - Greeting to welcome the user to the app
+#. defaultMessage is:
+#. Hello, {name}!
+msgid "Hello, {name}!"
+msgstr ""

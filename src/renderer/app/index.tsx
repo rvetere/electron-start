@@ -1,14 +1,30 @@
-import { hot } from "react-hot-loader/root";
+import { hot } from 'react-hot-loader/root'
 
-import React from "react";
-import { client } from "./graphql/initApollo";
-import { ApolloProvider } from "@apollo/react-hooks";
-import { Home } from "./home";
+import React, { useState, useEffect } from 'react'
+import { client } from './graphql/initApollo'
+import { ApolloProvider } from '@apollo/react-hooks'
+import { IntlProvider } from 'react-intl'
+import messages from '../../common/messages.json'
+import { Home } from './home'
 
-const App = () => (
-  <ApolloProvider client={client}>
-    <Home />
-  </ApolloProvider>
-);
+const messagesTyped: any = messages
 
-export default hot(App);
+const App = () => {
+  const [lang, setLang] = useState<string>('de')
+
+  useEffect(() => {
+    //@ts-ignore
+    window.setLang = setLang
+  }, [])
+
+  const msgs = messagesTyped[lang] || {}
+  return (
+    <ApolloProvider client={client}>
+      <IntlProvider locale={lang} messages={msgs} key={lang}>
+        <Home />
+      </IntlProvider>
+    </ApolloProvider>
+  )
+}
+
+export default hot(App)

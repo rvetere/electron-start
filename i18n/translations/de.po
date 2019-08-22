@@ -1,0 +1,20 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2019-08-22T17:40:08.369Z\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 2.2.3\n"
+"Project-Id-Version: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de\n"
+
+#. [app.greeting] - Greeting to welcome the user to the app
+#. defaultMessage is:
+#. Hello, {name}!
+#: i18n/keys.json
+msgid "Hello, {name}!"
+msgstr "Hallo, {name}!"
