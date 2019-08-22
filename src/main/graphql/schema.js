@@ -1,8 +1,8 @@
-import path from "path";
-import { importSchema } from "graphql-import";
-import { makeExecutableSchema } from "graphql-tools";
-import resolvers from "./resolvers";
+import path from 'path'
+import { importSchema } from 'graphql-import'
+import { makeExecutableSchema } from 'graphql-tools'
+import resolvers from './dist/resolvers'
 
-const typeDefs = importSchema(path.resolve(__dirname, "schema.graphql"));
+const typeDefs = importSchema(path.resolve(__dirname, 'schema.graphql'))
 
-export default makeExecutableSchema({ typeDefs, resolvers });
+export default makeExecutableSchema({ typeDefs, resolvers })

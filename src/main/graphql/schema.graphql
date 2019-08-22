@@ -1,3 +1,9 @@
 type Query {
   hello: String
+  projects: [Project]
+}
+
+type Project {
+  id: Int!
+  name: String!
 }

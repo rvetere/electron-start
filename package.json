@@ -7,9 +7,11 @@
     "compile": "electron-webpack",
     "dist": "yarn compile && electron-builder",
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null",
+    "build:gql": "rimraf ./src/main/graphql/dist && tsc -p ./tsconfig.gql.json",
     "i18n:pot": "yarn i18n:msgs && react-intl-po json2pot ./i18n/keys.json -o ./i18n/translations/messages.pot",
     "i18n:json": "react-intl-po po2json ./i18n/translations/*.po -m ./i18n/keys.json -o ./src/common/messages.json",
-    "i18n:msgs": "react-intl-extract-messages --tsconfig ./tsconfig.intl.json --out ./i18n/keys.json"
+    "i18n:msgs": "react-intl-extract-messages --tsconfig ./tsconfig.intl.json --out ./i18n/keys.json",
+    "postinstall": "yarn build:gql && install-app-deps"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.0.1",
@@ -23,7 +25,8 @@
     "react-dom": "^16.9.0",
     "react-hot-loader": "^4.12.11",
     "react-intl": "^3.1.11",
-    "source-map-support": "^0.5.12"
+    "source-map-support": "^0.5.12",
+    "sqlite3": "^4.1.0"
   },
   "devDependencies": {
     "@allthings/react-intl-extract-messages": "^0.4.0",
@@ -32,6 +35,7 @@
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
     "@types/react-intl": "^3.0.0",
+    "@types/sqlite3": "^3.1.5",
     "css-loader": "^3.2.0",
     "electron": "5.0.6",
     "electron-builder": "^21.0.11",
@@ -45,6 +49,7 @@
     "postcss-simple-vars": "^5.0.2",
     "prettier": "^1.18.2",
     "react-intl-po": "^2.2.2",
+    "rimraf": "^3.0.0",
     "typescript": "^3.5.3",
     "webpack": "~4.35.3"
   }

@@ -7,12 +7,17 @@ import { FormattedMessage } from 'react-intl'
 export const Home = () => {
   const { loading, error, data } = useQuery(gql`
     {
-      hello
+      projects {
+        id
+        name
+      }
     }
   `)
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error :(</p>
+
+  console.log({ data })
 
   return (
     <div className={styles.home}>
@@ -21,7 +26,7 @@ export const Home = () => {
         description="Greeting to welcome the user to the app"
         defaultMessage="Hello, {name}!"
         values={{
-          name: data.hello
+          name: 'Brudi'
         }}
       />
     </div>
