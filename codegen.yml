@@ -1,0 +1,17 @@
+overwrite: true
+schema: './src/main/graphql/schema.graphql'
+generates:
+  ./src/main/graphql/generated.tsx:
+    plugins:
+      - add: // Generated File. Do not change it manually!
+      - add: // tslint:disable
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+      - 'fragment-matcher'
+    config:
+      skipTypename: true
+      namingConvention:
+        typeNames: change-case#pascalCase
+        enumValues: keep
+        transformUnderscore: true

@@ -6,15 +6,13 @@ Supports:
 
 - GraphQL/Apollo, integrated server with graphql-transport-electron
 - Typescript
-- Latest React with Hooks and full HMR
-- Fully configurable webpack
-- Awesome dotenv and nice setup to handle it in "main" and "renderer"
+- React with Hooks and full HMR
 - CSS Modules & PostCSS
+- sqlite3 & electron-builder (IT WORKS!)
+- I18n with react-intl and poedit
 
 TODO:
 
-- sqlite3 integration (electron-builder?)
-- Translations plugin
 - Aliases, especially for postcss
 
 # install dependencies

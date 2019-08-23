@@ -11,13 +11,14 @@
     "i18n:pot": "yarn i18n:msgs && react-intl-po json2pot ./i18n/keys.json -o ./i18n/translations/messages.pot",
     "i18n:json": "react-intl-po po2json ./i18n/translations/*.po -m ./i18n/keys.json -o ./src/common/messages.json",
     "i18n:msgs": "react-intl-extract-messages --tsconfig ./tsconfig.intl.json --out ./i18n/keys.json",
-    "postinstall": "yarn build:gql && install-app-deps"
+    "postinstall": "yarn build:gql && install-app-deps",
+    "generateTypes": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.0.1",
     "apollo-boost": "^0.4.4",
     "dotenv": "^8.1.0",
-    "graphql": "^14.4.2",
+    "graphql": "^14.5.0",
     "graphql-import": "^0.7.1",
     "graphql-tools": "^4.0.5",
     "graphql-transport-electron": "^1.0.1",
@@ -31,6 +32,14 @@
   "devDependencies": {
     "@allthings/react-intl-extract-messages": "^0.4.0",
     "@babel/preset-react": "^7.0.0",
+    "@graphql-codegen/add": "^1.6.1",
+    "@graphql-codegen/cli": "^1.6.1",
+    "@graphql-codegen/fragment-matcher": "1.6.1",
+    "@graphql-codegen/typescript": "1.6.1",
+    "@graphql-codegen/typescript-document-nodes": "1.6.1",
+    "@graphql-codegen/typescript-graphql-files-modules": "1.6.1",
+    "@graphql-codegen/typescript-operations": "1.6.1",
+    "@graphql-codegen/typescript-react-apollo": "1.6.1",
     "@types/graphql": "^14.2.3",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
